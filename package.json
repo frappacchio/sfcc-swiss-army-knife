@@ -1,0 +1,59 @@
+{
+  "name": "sfcc-webdav",
+  "version": "1.0.2",
+  "description": "Salesforce Commerce Cloud simple webdav API",
+  "keywords": [
+    "Salesforce Commerce Cloud",
+    "Demandware"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openmindlab/sfcc-webdav.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openmindlab/sfcc-webdav/issues"
+  },
+  "main": "./dist/webdav.js",
+  "types": "./dist/webdav.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Fabrizio Giustina"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "test": "jest",
+    "postversion": "git push && git push --tags",
+    "prettier": "npx prettier --write ./src && npx prettier --write ./tests "
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "devDependencies": {
+    "@types/fs-extra": "9.0.7",
+    "@types/jest": "26.0.20",
+    "@types/node": "13.13.3",
+    "@typescript-eslint/eslint-plugin": "4.15.2",
+    "ajv": "6.12.6",
+    "axios": "0.21.1",
+    "chalk": "4.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "fs-extra": "9.1.0",
+    "jest": "26.6.3",
+    "jsonschema": "1.4.0",
+    "prettier": "2.2.1",
+    "pretty-bytes": "5.3.0",
+    "slugify": "1.4.7",
+    "ts-jest": "26.5.1",
+    "typescript": "3.8.3"
+  }
+}
