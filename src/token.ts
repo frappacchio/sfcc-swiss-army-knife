@@ -14,9 +14,6 @@ export class Token extends EventEmitter {
   timeout: NodeJS.Timeout;
   autorefresh: boolean = true;
   dwjson: DWInstance;
-  constructor(dwjson?: DWInstance) {
-    super();
-  }
   async authorize(): Promise<string> {
     if (!this.dwjson) {
       this.dwjson = await dwinstance();
